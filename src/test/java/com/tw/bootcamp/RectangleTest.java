@@ -19,4 +19,10 @@ public class RectangleTest {
         assertThrows(IllegalArgumentException.class, () -> rectangle.calculate(-2.0f, 3.0f));
     }
 
+    @Test
+    void testCalculateRectangleAreaNullInput() {
+        Rectangle rectangle = new Rectangle();
+        assertThrows(IllegalArgumentException.class, () -> rectangle.calculate(null, null));
+    }
+
 }
