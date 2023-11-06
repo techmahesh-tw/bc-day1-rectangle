@@ -8,19 +8,20 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 class RectangleTest {
 
     @Test
-    void testCalculateRectangleAreaNegativeInput() {
+    void shouldThrowExceptionIfNegativeInputs() {
         assertThrows(IllegalArgumentException.class, () -> new Rectangle(-2.0f, 3.0f));
     }
 
     @Test
-    void testCalculateRectangleAreaNullInput() {
-        assertThrows(IllegalArgumentException.class, () -> new Rectangle(null, null));
+    void shouldReturnAreaOfRectangle() {
+        Rectangle rectangle = new Rectangle(2.0f, 3.0f);
+        assertEquals(6.0f, rectangle.area());
     }
 
     @Test
-    void testCalculateRectangleArea() {
+    void shouldReturnPerimeterOfRectangle() {
         Rectangle rectangle = new Rectangle(2.0f, 3.0f);
-        assertEquals(6.0f, rectangle.area());
+        assertEquals(10.0f, rectangle.perimeter());
     }
 
 }

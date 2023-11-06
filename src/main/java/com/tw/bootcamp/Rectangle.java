@@ -2,13 +2,11 @@ package com.tw.bootcamp;
 
 public class Rectangle {
 
-    private final Float length;
-    private final Float breath;
+    private final float length;
+    private final float breath;
 
-    public Rectangle(Float length, Float breath) {
-        if (null == length || null == breath) {
-            throw new IllegalArgumentException("Inputs should not be null");
-        } else if (length <= 0.0f || breath <= 0.0f) {
+    public Rectangle(float length, float breath) {
+        if (length <= 0.0f || breath <= 0.0f) {
             throw new IllegalArgumentException("Inputs have to be positive numbers");
         }
         this.length = length;
@@ -17,5 +15,9 @@ public class Rectangle {
 
     public Float area() {
         return length * breath;
+    }
+
+    public float perimeter() {
+        return (2*length) + (2*breath);
     }
 }
