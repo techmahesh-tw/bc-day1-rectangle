@@ -9,20 +9,20 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
     @Test
     void testCalculateRectangleArea() {
-        Float result = new Rectangle().calculateArea(2.0f, 3.0f);
+        Float result = new Rectangle().area(2.0f, 3.0f);
         assertEquals(6.0f, result);
     }
 
     @Test
     void testCalculateRectangleAreaNegativeInput() {
         Rectangle rectangle = new Rectangle();
-        assertThrows(IllegalArgumentException.class, () -> rectangle.calculateArea(-2.0f, 3.0f));
+        assertThrows(IllegalArgumentException.class, () -> rectangle.area(-2.0f, 3.0f));
     }
 
     @Test
     void testCalculateRectangleAreaNullInput() {
         Rectangle rectangle = new Rectangle();
-        assertThrows(IllegalArgumentException.class, () -> rectangle.calculateArea(null, null));
+        assertThrows(IllegalArgumentException.class, () -> rectangle.area(null, null));
     }
 
 }
