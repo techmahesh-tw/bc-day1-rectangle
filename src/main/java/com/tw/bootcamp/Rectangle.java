@@ -2,8 +2,8 @@ package com.tw.bootcamp;
 
 public class Rectangle {
 
-    private Float length;
-    private Float breath;
+    private final Float length;
+    private final Float breath;
 
     public Rectangle(Float length, Float breath) {
         if (null == length || null == breath) {
